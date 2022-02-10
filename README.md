@@ -32,7 +32,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.bootstrap
     - role: buluma.epel
     - role: robertdebock.apt_autostart
-    - role: buluma.sysctl
+    - role: robertdebock.sysctl
       sysctl_items:
         - name: vm.overcommit_memory
           value: 1
@@ -57,7 +57,7 @@ The following roles are used to prepare a system. You can prepare your system in
 |[robertdebock.apt_autostart](https://galaxy.ansible.com/buluma/robertdebock.apt_autostart)|[![Build Status GitHub](https://github.com/buluma/robertdebock.apt_autostart/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.apt_autostart/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.apt_autostart/badges/main/pipeline.svg)](https://gitlab.com/buluma/robertdebock.apt_autostart)|
 |[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 |[buluma.epel](https://galaxy.ansible.com/buluma/epel)|[![Build Status GitHub](https://github.com/buluma/ansible-role-epel/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-epel/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-epel/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-epel)|
-|[buluma.sysctl](https://galaxy.ansible.com/buluma/sysctl)|[![Build Status GitHub](https://github.com/buluma/ansible-role-sysctl/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-sysctl/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-sysctl/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-sysctl)|
+|[robertdebock.sysctl](https://galaxy.ansible.com/buluma/robertdebock.sysctl)|[![Build Status GitHub](https://github.com/buluma/robertdebock.sysctl/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.sysctl/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.sysctl/badges/main/pipeline.svg)](https://gitlab.com/buluma/robertdebock.sysctl)|
 |[robertdebock.grub](https://galaxy.ansible.com/buluma/robertdebock.grub)|[![Build Status GitHub](https://github.com/buluma/robertdebock.grub/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.grub/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.grub/badges/main/pipeline.svg)](https://gitlab.com/buluma/robertdebock.grub)|
 
 ## [Context](#context)
