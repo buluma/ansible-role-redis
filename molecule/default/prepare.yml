@@ -8,7 +8,7 @@
     - role: buluma.bootstrap
     - role: buluma.epel
     - role: robertdebock.apt_autostart
-    - role: robertdebock.sysctl
+    - role: buluma.sysctl
       sysctl_items:
         - name: vm.overcommit_memory
           value: 1
