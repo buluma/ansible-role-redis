@@ -7,12 +7,13 @@
   roles:
     - role: buluma.bootstrap
     - role: buluma.epel
-    - role: robertdebock.apt_autostart
+    - role: buluma.apt_autostart
     - role: buluma.sysctl
       sysctl_items:
         - name: vm.overcommit_memory
           value: 1
     - role: robertdebock.grub
+      # TODO: build grub
       grub_options:
         - option: transparent_hugepage
           value: never
