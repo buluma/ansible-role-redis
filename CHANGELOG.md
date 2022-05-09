@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+## [1.7.7](https://github.com/buluma/ansible-role-redis/tree/1.7.7) (2022-05-09)
 
-[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.6...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.6...1.7.7)
 
 **Merged pull requests:**
 
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#8](https://github.com/buluma/ansible-role-redis/pull/8) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#7](https://github.com/buluma/ansible-role-redis/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.7.6](https://github.com/buluma/ansible-role-redis/tree/1.7.6) (2022-03-20)
