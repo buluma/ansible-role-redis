@@ -20,11 +20,14 @@
 **Merged pull requests:**
 
 - version bump/focal [\#5](https://github.com/buluma/ansible-role-redis/pull/5) ([buluma](https://github.com/buluma))
-- Update .gitlab-ci.yml [\#4](https://github.com/buluma/ansible-role-redis/pull/4) ([buluma](https://github.com/buluma))
 
 ## [1.7.4](https://github.com/buluma/ansible-role-redis/tree/1.7.4) (2022-02-11)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.3...1.7.4)
+
+**Merged pull requests:**
+
+- Update .gitlab-ci.yml [\#4](https://github.com/buluma/ansible-role-redis/pull/4) ([buluma](https://github.com/buluma))
 
 ## [1.7.3](https://github.com/buluma/ansible-role-redis/tree/1.7.3) (2022-02-10)
 
