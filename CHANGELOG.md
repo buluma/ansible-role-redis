@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.7.8](https://github.com/buluma/ansible-role-redis/tree/1.7.8) (2022-05-13)
+
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.7...1.7.8)
+
 ## [1.7.7](https://github.com/buluma/ansible-role-redis/tree/1.7.7) (2022-05-09)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.6...1.7.7)
