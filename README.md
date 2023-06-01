@@ -4,11 +4,12 @@ Install and configure redis on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-redis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-redis/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-redis/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-redis)|[![quality](https://img.shields.io/ansible/quality/54968)](https://galaxy.ansible.com/buluma/redis)|[![downloads](https://img.shields.io/ansible/role/d/54968)](https://galaxy.ansible.com/buluma/redis)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-redis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-redis/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-redis/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-redis)|[![quality](https://img.shields.io/ansible/quality/54968)](https://galaxy.ansible.com/buluma/redis)|[![downloads](https://img.shields.io/ansible/role/d/54968)](https://galaxy.ansible.com/buluma/redis)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-redis/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
 ```yaml
 ---
 - name: Converge
@@ -20,7 +21,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     - role: buluma.redis
 ```
 
-The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-redis/blob/master/molecule/default/prepare.yml):
+
 ```yaml
 ---
 - name: Prepare
@@ -37,28 +39,30 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
         - name: vm.overcommit_memory
           value: 1
     - role: robertdebock.grub
+      # TODO: build grub
       grub_options:
         - option: transparent_hugepage
           value: never
 ```
 
+Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
 
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-redis/blob/main/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-redis/blob/master/requirements.txt).
 
-## [Status of used roles](#status-of-requirements)
+## [State of used roles](#state-of-used-roles)
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.apt_autostart](https://galaxy.ansible.com/buluma/apt_autostart)|[![Build Status GitHub](https://github.com/buluma/ansible-role-apt_autostart/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-apt_autostart/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-apt_autostart/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-apt_autostart)|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[buluma.epel](https://galaxy.ansible.com/buluma/epel)|[![Build Status GitHub](https://github.com/buluma/ansible-role-epel/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-epel/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-epel/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-epel)|
-|[buluma.sysctl](https://galaxy.ansible.com/buluma/sysctl)|[![Build Status GitHub](https://github.com/buluma/ansible-role-sysctl/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-sysctl/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-sysctl/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-sysctl)|
-|[robertdebock.grub](https://galaxy.ansible.com/buluma/robertdebock.grub)|[![Build Status GitHub](https://github.com/buluma/robertdebock.grub/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.grub/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.grub/badges/main/pipeline.svg)](https://gitlab.com/buluma/robertdebock.grub)|
+|[buluma.apt_autostart](https://galaxy.ansible.com/buluma/apt_autostart)|[![Build Status GitHub](https://github.com/buluma/ansible-role-apt_autostart/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-apt_autostart/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-apt_autostart/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-apt_autostart)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.epel](https://galaxy.ansible.com/buluma/epel)|[![Build Status GitHub](https://github.com/buluma/ansible-role-epel/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-epel/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-epel/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-epel)|
+|[buluma.sysctl](https://galaxy.ansible.com/buluma/sysctl)|[![Build Status GitHub](https://github.com/buluma/ansible-role-sysctl/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-sysctl/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-sysctl/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-sysctl)|
+|[robertdebock.grub](https://galaxy.ansible.com/buluma/robertdebock.grub)|[![Build Status GitHub](https://github.com/buluma/robertdebock.grub/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.grub/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/robertdebock.grub/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/robertdebock.grub)|
 
 ## [Context](#context)
 
@@ -74,20 +78,19 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|alpine|all|
-|el|8|
-|debian|all|
-|fedora|all|
-|opensuse|all|
-|ubuntu|all|
+|[Alpine](https://hub.docker.com/repository/docker/buluma/alpine/general)|all|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
+|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
+|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
+|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
 - The development version.
-
-
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-redis/issues)
 
@@ -97,8 +100,14 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-Apache-2.0
+[Apache-2.0](https://github.com/buluma/ansible-role-redis/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.github.io/)
+[buluma](https://buluma.github.io/)
+
+Please consider [sponsoring me](https://github.com/sponsors/buluma).
+
+### [Special Thanks](#special-thanks)
+
+Template inspired by [Robert de Bock](https://github.com/robertdebock)
