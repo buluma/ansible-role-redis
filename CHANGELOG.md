@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.9...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#15](https://github.com/buluma/ansible-role-redis/issues/15)
+- Update action [\#14](https://github.com/buluma/ansible-role-redis/issues/14)
+
 ## [1.7.9](https://github.com/buluma/ansible-role-redis/tree/1.7.9) (2022-10-07)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.7.8...1.7.9)
