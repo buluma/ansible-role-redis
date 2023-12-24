@@ -1,10 +1,10 @@
-# [Ansible role redis](#redis)
+# Ansible role [redis](https://galaxy.ansible.com/ui/standalone/roles/buluma/redis/documentation)
 
 Install and configure redis on your system.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-redis/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-redis/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-redis/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-redis/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-redis.svg)](https://github.com/buluma/ansible-role-redis/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/redis)](https://galaxy.ansible.com/ui/standalone/roles/buluma/redis/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -99,13 +99,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-redis/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-redis/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
