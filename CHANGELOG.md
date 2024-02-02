@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+## [1.9.0](https://github.com/buluma/ansible-role-redis/tree/1.9.0) (2024-01-20)
 
-[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.8.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.8.0...1.9.0)
 
 **Closed issues:**
 
