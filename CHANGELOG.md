@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.9.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#29](https://github.com/buluma/ansible-role-redis/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.9.0](https://github.com/buluma/ansible-role-redis/tree/1.9.0) (2024-01-20)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.8.0...1.9.0)
