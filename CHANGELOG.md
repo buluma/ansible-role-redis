@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5 to 6 [\#30](https://github.com/buluma/ansible-role-redis/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#29](https://github.com/buluma/ansible-role-redis/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.9.0](https://github.com/buluma/ansible-role-redis/tree/1.9.0) (2024-01-20)
