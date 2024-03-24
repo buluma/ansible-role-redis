@@ -1,0 +1,17 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "redis" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.apt_autostart" [fillcolor=green style=filled]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.epel" [fillcolor=green style=filled]
+    "buluma.sysctl" [fillcolor=green style=filled]
+    "robertdebock.grub" [fillcolor=green style=filled]
+  }
+  "redis" -> "buluma.apt_autostart"
+  "redis" -> "buluma.bootstrap"
+  "redis" -> "buluma.epel"
+  "redis" -> "buluma.sysctl"
+  "redis" -> "robertdebock.grub"
+}
