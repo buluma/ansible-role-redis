@@ -5,4 +5,4 @@
 repository:
   description: Install and configure redis on your system.
   homepage: https://buluma.github.io/
-  topics: redis, server, system, ansible, molecule, tox, playbook
+  topics: redis, server, system, ansible, molecule, playbook
