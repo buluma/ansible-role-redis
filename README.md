@@ -12,37 +12,37 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
-  hosts: all
-  become: true
-  gather_facts: true
+  - name: Converge
+    hosts: all
+    become: true
+    gather_facts: true
 
-  roles:
-    - role: buluma.redis
+    roles:
+      - role: buluma.redis
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-redis/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-- name: Prepare
-  hosts: all
-  gather_facts: false
-  become: true
+  - name: Prepare
+    hosts: all
+    gather_facts: false
+    become: true
 
-  roles:
-    - role: buluma.bootstrap
-    - role: buluma.epel
-    - role: buluma.apt_autostart
-    - role: buluma.sysctl
-      sysctl_items:
-        - name: vm.overcommit_memory
-          value: 1
-    - role: robertdebock.grub
+    roles:
+      - role: buluma.bootstrap
+      - role: buluma.epel
+      - role: buluma.apt_autostart
+      - role: buluma.sysctl
+        sysctl_items:
+          - name: vm.overcommit_memory
+            value: 1
+      - role: robertdebock.grub
       # TODO: build grub
-      grub_options:
-        - option: transparent_hugepage
-          value: never
+        grub_options:
+          - option: transparent_hugepage
+            value: never
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.

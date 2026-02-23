@@ -1,17 +1,17 @@
 ---
-- name: Verify
-  hosts: all
-  become: true
-  gather_facts: false
+  - name: Verify
+    hosts: all
+    become: true
+    gather_facts: false
 
-  tasks:
-    - name: Write my_key to redis
-      ansible.builtin.command:
-        cmd: redis-cli set my_key my_value
+    tasks:
+      - name: Write my_key to redis
+        ansible.builtin.command:
+          cmd: redis-cli set my_key my_value
 
-    - name: Read my_key from redis
-      ansible.builtin.command:
-        cmd: redis-cli get my_key
-      register: redis_read_my_key_from_redis
-      failed_when:
-        - redis_read_my_key_from_redis.stdout != "my_value"
+      - name: Read my_key from redis
+        ansible.builtin.command:
+          cmd: redis-cli get my_key
+        register: redis_read_my_key_from_redis
+        failed_when:
+          - redis_read_my_key_from_redis.stdout != "my_value"
