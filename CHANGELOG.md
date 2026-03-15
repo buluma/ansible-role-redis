@@ -9,6 +9,10 @@
 - Update action [\#18](https://github.com/buluma/ansible-role-redis/issues/18)
 - rebuild action [\#17](https://github.com/buluma/ansible-role-redis/issues/17)
 
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#34](https://github.com/buluma/ansible-role-redis/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-redis/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/1.9.0...24.3.31)
