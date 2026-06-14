@@ -8,7 +8,7 @@
 
 - name: Configure redis
   ansible.builtin.template:
-    src: "redis.conf-{{ ansible_facts.distribution }}.j2"
+    src: "redis.conf-{{ ansible_facts['distribution'] }}.j2"
     dest: "{{ redis_configuration_directory }}/{{ redis_configuration_file }}"
     owner: "{{ redis_owner }}"
     group: "{{ redis_group }}"
