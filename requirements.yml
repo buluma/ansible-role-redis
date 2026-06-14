@@ -5,5 +5,5 @@ roles:
   - name: buluma.epel
   - name: buluma.sysctl
   - name: robertdebock.grub
-collections:
+collections: []
   - name: ansible.posix

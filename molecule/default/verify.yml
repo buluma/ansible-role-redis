@@ -7,10 +7,12 @@
   tasks:
     - name: Write my_key to redis
       ansible.builtin.command:
+      changed_when: false
         cmd: redis-cli set my_key my_value
 
     - name: Read my_key from redis
       ansible.builtin.command:
+      changed_when: false
         cmd: redis-cli get my_key
       register: redis_read_my_key_from_redis
       failed_when:
