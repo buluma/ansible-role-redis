@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/26.6.0...HEAD)
+
+**Closed issues:**
+
+- build grub [\#16](https://github.com/buluma/ansible-role-redis/issues/16)
+
 ## [26.6.0](https://github.com/buluma/ansible-role-redis/tree/26.6.0) (2026-06-14)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/24.3.31...26.6.0)
