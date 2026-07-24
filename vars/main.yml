@@ -91,6 +91,31 @@ _redis_data_directory:
 redis_data_directory: "{{ _redis_data_directory[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_redis_data_directory[ansible_facts['distribution']]
   | default(_redis_data_directory[ansible_facts['os_family']] | default(_redis_data_directory['default']))) }}"
 
+_redis_log_file:
+  default: /var/log/redis/redis.log
+  Fedora: /var/log/valkey/valkey.log
+  RedHat-10: /var/log/valkey/valkey.log
+  Rocky-10: /var/log/valkey/valkey.log
+  AlmaLinux-10: /var/log/valkey/valkey.log
+  CentOS-10: /var/log/valkey/valkey.log
+
+redis_log_file: "{{ _redis_log_file[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_redis_log_file[ansible_facts['distribution']]
+  | default(_redis_log_file[ansible_facts['os_family']] | default(_redis_log_file['default']))) }}"
+
+# Valkey's systemd unit uses RuntimeDirectory=valkey, which only makes
+# /run/valkey writable - the traditional /var/run/redis_6379.pid path
+# isn't covered by that sandboxing.
+_redis_pid_file:
+  default: /var/run/redis_6379.pid
+  Fedora: /run/valkey/valkey.pid
+  RedHat-10: /run/valkey/valkey.pid
+  Rocky-10: /run/valkey/valkey.pid
+  AlmaLinux-10: /run/valkey/valkey.pid
+  CentOS-10: /run/valkey/valkey.pid
+
+redis_pid_file: "{{ _redis_pid_file[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_redis_pid_file[ansible_facts['distribution']]
+  | default(_redis_pid_file[ansible_facts['os_family']] | default(_redis_pid_file['default']))) }}"
+
 _redis_mode:
   default: "640"
   Alpine: "644"
