@@ -1,40 +1,52 @@
 ---
 # vars file for redis
 
+# Fedora replaced redis with Valkey (a fork) starting F41 - `dnf install
+# redis` resolves to a compat shim, but the real package/user/group/
+# service/config path are all "valkey". Fedora's os_family is "RedHat"
+# (shared with CentOS/Rocky/AlmaLinux, which still ship real Redis), so
+# every lookup below checks distribution before falling back to os_family.
+
 _redis_packages:
   default:
     - redis
   Debian:
     - redis-server
+  Fedora:
+    - valkey
 
-redis_packages: "{{ _redis_packages[ansible_facts['os_family']] | default(_redis_packages['default']) }}"
+redis_packages: "{{ _redis_packages[ansible_facts['distribution']] | default(_redis_packages[ansible_facts['os_family']] | default(_redis_packages['default'])) }}"
 
 _redis_configuration_directory:
   default: /etc
   Debian: /etc/redis
   Suse: /etc/redis
+  Fedora: /etc/valkey
 
-redis_configuration_directory: "{{ _redis_configuration_directory[ansible_facts['os_family']] | default(_redis_configuration_directory['default']) }}"
+redis_configuration_directory: "{{ _redis_configuration_directory[ansible_facts['distribution']] | default(_redis_configuration_directory[ansible_facts['os_family']] | default(_redis_configuration_directory['default'])) }}"
 
 _redis_configuration_file:
   default: redis.conf
   Suse: default.conf
+  Fedora: valkey.conf
 
-redis_configuration_file: "{{ _redis_configuration_file[ansible_facts['os_family']] | default(_redis_configuration_file['default']) }}"
+redis_configuration_file: "{{ _redis_configuration_file[ansible_facts['distribution']] | default(_redis_configuration_file[ansible_facts['os_family']] | default(_redis_configuration_file['default'])) }}"
 
 _redis_owner:
   default: redis
   Alpine: root
   Suse: root
+  Fedora: valkey
 
-redis_owner: "{{ _redis_owner[ansible_facts['os_family']] | default(_redis_owner['default']) }}"
+redis_owner: "{{ _redis_owner[ansible_facts['distribution']] | default(_redis_owner[ansible_facts['os_family']] | default(_redis_owner['default'])) }}"
 
 _redis_group:
   default: root
   Debian: redis
   Suse: redis
+  Fedora: valkey
 
-redis_group: "{{ _redis_group[ansible_facts['os_family']] | default(_redis_group['default']) }}"
+redis_group: "{{ _redis_group[ansible_facts['distribution']] | default(_redis_group[ansible_facts['os_family']] | default(_redis_group['default'])) }}"
 
 _redis_mode:
   default: "640"
@@ -46,5 +58,6 @@ _redis_service:
   default: redis
   Debian: redis-server
   Suse: redis@default
+  Fedora: valkey
 
-redis_service: "{{ _redis_service[ansible_facts['os_family']] | default(_redis_service['default']) }}"
+redis_service: "{{ _redis_service[ansible_facts['distribution']] | default(_redis_service[ansible_facts['os_family']] | default(_redis_service['default'])) }}"
