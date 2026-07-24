@@ -80,6 +80,17 @@ _redis_group:
 redis_group: "{{ _redis_group[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_redis_group[ansible_facts['distribution']] | default(_redis_group[ansible_facts['os_family']]
   | default(_redis_group['default']))) }}"
 
+_redis_data_directory:
+  default: /var/lib/redis
+  Fedora: /var/lib/valkey
+  RedHat-10: /var/lib/valkey
+  Rocky-10: /var/lib/valkey
+  AlmaLinux-10: /var/lib/valkey
+  CentOS-10: /var/lib/valkey
+
+redis_data_directory: "{{ _redis_data_directory[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_redis_data_directory[ansible_facts['distribution']]
+  | default(_redis_data_directory[ansible_facts['os_family']] | default(_redis_data_directory['default']))) }}"
+
 _redis_mode:
   default: "640"
   Alpine: "644"
