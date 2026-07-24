@@ -9,15 +9,15 @@
     # shim that Fedora's valkey-compat-redis provides), so fall back to
     # valkey-cli when redis-cli isn't on PATH.
     - name: Write my_key to redis
-      ansible.builtin.shell: |
-        set -o pipefail
-        command -v redis-cli >/dev/null 2>&1 && redis-cli set my_key my_value || valkey-cli set my_key my_value
+      ansible.builtin.shell:
+        cmd: |
+          command -v redis-cli >/dev/null 2>&1 && redis-cli set my_key my_value || valkey-cli set my_key my_value
       changed_when: false
 
     - name: Read my_key from redis
-      ansible.builtin.shell: |
-        set -o pipefail
-        command -v redis-cli >/dev/null 2>&1 && redis-cli get my_key || valkey-cli get my_key
+      ansible.builtin.shell:
+        cmd: |
+          command -v redis-cli >/dev/null 2>&1 && redis-cli get my_key || valkey-cli get my_key
       changed_when: false
       register: redis_read_my_key_from_redis
       failed_when:
