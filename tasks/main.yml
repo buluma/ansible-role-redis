@@ -21,3 +21,16 @@
     name: "{{ redis_service }}"
     state: started
     enabled: true
+  register: redis_start_result
+  ignore_errors: true
+
+- name: Debug | Capture journal on start failure.
+  ansible.builtin.command: journalctl -xeu {{ redis_service }} --no-pager -n 200
+  changed_when: false
+  register: redis_journal
+  when: redis_start_result is failed
+
+- name: Debug | Fail with journal.
+  ansible.builtin.fail:
+    msg: "{{ redis_journal.stdout_lines }}"
+  when: redis_start_result is failed
