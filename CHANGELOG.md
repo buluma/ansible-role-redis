@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-redis/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-redis/compare/26.6.1...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 7 to 7.6.0 [\#39](https://github.com/buluma/ansible-role-redis/pull/39) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [26.6.1](https://github.com/buluma/ansible-role-redis/tree/26.6.1) (2026-07-24)
 
 [Full Changelog](https://github.com/buluma/ansible-role-redis/compare/26.6.0...26.6.1)
