@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump ansible/ansible-lint from 26.6.0 to 26.8.0 [\#40](https://github.com/buluma/ansible-role-redis/pull/40) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 7 to 7.6.0 [\#39](https://github.com/buluma/ansible-role-redis/pull/39) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [26.6.1](https://github.com/buluma/ansible-role-redis/tree/26.6.1) (2026-07-24)
