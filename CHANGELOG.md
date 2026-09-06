@@ -39,6 +39,7 @@
 - Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#31](https://github.com/buluma/ansible-role-redis/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#30](https://github.com/buluma/ansible-role-redis/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#29](https://github.com/buluma/ansible-role-redis/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#8](https://github.com/buluma/ansible-role-redis/pull/8) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.9.0](https://github.com/buluma/ansible-role-redis/tree/1.9.0) (2024-01-20)
 
@@ -71,7 +72,6 @@
 
 **Merged pull requests:**
 
-- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#8](https://github.com/buluma/ansible-role-redis/pull/8) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#7](https://github.com/buluma/ansible-role-redis/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.7.6](https://github.com/buluma/ansible-role-redis/tree/1.7.6) (2022-03-20)
